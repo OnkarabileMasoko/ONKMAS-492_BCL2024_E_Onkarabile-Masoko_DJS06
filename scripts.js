@@ -36,3 +36,8 @@ console.log("\n4. Sorting:");
 const sortedProvinces = provinces.slice().sort(); // Slice to avoid mutating the original array
 console.log(sortedProvinces);
 
+// 5. Filtering Cape
+console.log("\n5. Filtering Cape:");
+const noCapeProvinces = provinces.filter(province => !province.includes('Cape'));
+console.log(`Count of remaining provinces: ${noCapeProvinces.length}`); // Fixed template literal syntax
+
