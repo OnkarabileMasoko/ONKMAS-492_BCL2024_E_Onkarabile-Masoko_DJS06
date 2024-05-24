@@ -53,3 +53,39 @@ const nameProvinceMap = names.reduce((map, name, index) => {
   return map;
 }, {});
 console.log(nameProvinceMap);
+
+// Advanced Exercises
+console.log("\nAdvanced Exercises:");
+
+// 1. Log Products
+console.log("\n1. Log Products:");
+const productNames = products.map(p => p.product);
+console.log(productNames);
+
+// 2. Filter by Name Length
+console.log("\n2. Filter by Name Length:");
+const shortNamedProducts = products.filter(p => p.product.length <= 5);
+console.log(shortNamedProducts);
+
+// 3. Price Manipulation
+console.log("\n3. Price Manipulation:");
+const validPricedProducts = products.filter(p => p.price && !isNaN(p.price));
+const totalPrice = validPricedProducts.reduce((sum, p) => sum + Number(p.price), 0);
+console.log(`Total price: ${totalPrice}`);
+
+// 4. Concatenate Product Names
+console.log("\n4. Concatenate Product Names:");
+const concatenatedProductNames = products.reduce((str, p) => str + p.product, "");
+console.log(concatenatedProductNames);
+
+// 5. Find Extremes in Prices
+console.log("\n5. Find Extremes in Prices:");
+const numericPrices = products.map(p => Number(p.price) || 0);
+const highestPrice = Math.max(...numericPrices);
+const lowestPrice = Math.min(...numericPrices);
+console.log(`Highest: ${highestPrice}. Lowest: ${lowestPrice}`);
+
+// 6. Object Transformation
+console.log("\n6. Object Transformation:");
+const transformedProducts = products.map(({ product, price }) => ({ name: product, cost: price }));
+console.log(transformedProducts);
