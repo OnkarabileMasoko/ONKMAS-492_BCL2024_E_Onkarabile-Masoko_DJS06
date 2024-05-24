@@ -45,3 +45,11 @@ console.log(`Count of remaining provinces: ${noCapeProvinces.length}`); // Fixed
 console.log("\n6. Finding 'S':");
 const namesWithS = names.map(name => name.toLowerCase().includes('s'));
 console.log(namesWithS);
+
+// 7. Creating Object Mapping
+console.log("\n7. Creating Object Mapping:");
+const nameProvinceMap = names.reduce((map, name, index) => {
+  map[name] = provinces[index];
+  return map;
+}, {});
+console.log(nameProvinceMap);
