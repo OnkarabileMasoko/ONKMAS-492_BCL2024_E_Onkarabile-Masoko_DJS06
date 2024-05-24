@@ -30,3 +30,9 @@ console.log(uppercaseProvinces);
 console.log("\n3. Name Lengths:");
 const nameLengths = names.map(name => name.length);
 console.log(nameLengths);
+
+// 4. Sorting
+console.log("\n4. Sorting:");
+const sortedProvinces = provinces.slice().sort(); // Slice to avoid mutating the original array
+console.log(sortedProvinces);
+
