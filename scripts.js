@@ -41,3 +41,7 @@ console.log("\n5. Filtering Cape:");
 const noCapeProvinces = provinces.filter(province => !province.includes('Cape'));
 console.log(`Count of remaining provinces: ${noCapeProvinces.length}`); // Fixed template literal syntax
 
+// 6. Finding 'S'
+console.log("\n6. Finding 'S':");
+const namesWithS = names.map(name => name.toLowerCase().includes('s'));
+console.log(namesWithS);
