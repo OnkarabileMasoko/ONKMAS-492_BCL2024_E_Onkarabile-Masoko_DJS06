@@ -20,3 +20,8 @@ console.log("1. forEach Basics:");
 provinces.forEach(province => console.log(province));
 names.forEach(name => console.log(name));
 names.forEach((name, index) => console.log(`${name} (${provinces[index]})`)); // Fixed template literal syntax
+
+// 2. Uppercase Transformation
+console.log("\n2. Uppercase Transformation:");
+const uppercaseProvinces = provinces.map(province => province.toUpperCase());
+console.log(uppercaseProvinces);
